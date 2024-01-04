@@ -12,6 +12,7 @@ class NewsListPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('News App'),
+        elevation: 0,
       ),
       body: FutureBuilder<String>(
         future:

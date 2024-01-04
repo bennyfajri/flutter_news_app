@@ -3,6 +3,7 @@ import 'package:news_app/Article.dart';
 import 'package:news_app/article_web_view.dart';
 import 'package:news_app/detail_page.dart';
 import 'package:news_app/news_list_page.dart';
+import 'package:news_app/styles.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,8 +18,21 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        colorScheme: Theme.of(context).colorScheme.copyWith(
+            primary: primaryColor,
+            onPrimary: Colors.black,
+            secondary: secondaryColor),
+        textTheme: myTextTheme,
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: secondaryColor,
+            foregroundColor: Colors.white,
+            textStyle: const TextStyle(),
+            shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(0))
+            ),
+          ),
+        ),
       ),
       initialRoute: NewsListPage.routeName,
       routes: {
