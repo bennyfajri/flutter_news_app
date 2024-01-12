@@ -13,7 +13,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -23,7 +22,10 @@ class MyApp extends StatelessWidget {
             primary: primaryColor,
             onPrimary: Colors.black,
             secondary: secondaryColor),
+        scaffoldBackgroundColor: Colors.white,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
         textTheme: myTextTheme,
+        appBarTheme: const AppBarTheme(elevation: 0),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             backgroundColor: secondaryColor,
