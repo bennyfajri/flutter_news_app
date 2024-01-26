@@ -5,6 +5,8 @@ import 'package:news_app/widgets/card_article.dart';
 import 'package:news_app/widgets/platform_widget.dart';
 import 'package:provider/provider.dart';
 
+import '../utils/result_state.dart';
+
 class ArticleListPage extends StatelessWidget {
   const ArticleListPage({super.key});
 
